@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="logo-container">
+      <img src="@/assets/x-logo.png" class="logo"/>
+    </div>
     <InputField
       :type="'text'"
       :placeholder="'Email'"
@@ -12,10 +15,10 @@
       :modelvalue="password"
     />
 
-    <button @click="login">로그인하기</button>
+    <button class="button" @click="login">로그인하기</button>
     <div>
       계정이 없으신가요?
-      <span>가입하기</span>
+      <router-link class="signup-button" to="/signup">가입하기</router-link>
     </div>
   </div>
 </template>
@@ -39,5 +42,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.signup-button {
+    color: aqua;
+    cursor: pointer;
+}
 </style>
