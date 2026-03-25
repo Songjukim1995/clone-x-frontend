@@ -16,18 +16,16 @@
 </template>
 
 <script>
-import { useFeedStore } from '../store/feed' // 1번에서 만든 스토어 가져오기
+import { useFeedStore } from '../store/feed'
 
 export default {
   name: "FeedList",
   data() {
     return {
-      // 1️⃣번 요구사항: 스토어 연결
       feedStore: useFeedStore()
     }
   },
   created() {
-    // 3️⃣번 요구사항: 화면이 켜지자마자 데이터를 가져오는 액션 실행!
     this.feedStore.getFeedData()
   }
 }

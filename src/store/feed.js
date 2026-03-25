@@ -2,10 +2,9 @@ import { defineStore } from 'pinia'
 
 export const useFeedStore = defineStore('feedStore', {
   state: () => ({
-    feedData: [] // 초기 데이터는 빈 배열
+    feedData: [] 
   }),
   actions: {
-    // 3️⃣번 요구사항: 액션(함수)을 통해 데이터를 state에 채우기
     getFeedData() {
       this.feedData = [
         { id: 11, content: "코딩은 재밌어!", user: { id: 12, name: "테스터" } },
