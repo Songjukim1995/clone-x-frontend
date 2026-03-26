@@ -17,6 +17,9 @@ export const useFeedStore = defineStore('feedStore', {
         { id: 2, content: "아침 커피로 하루 시작", user: { id: 11, name: "user" } },
         { id: 1, content: "오늘도 멋진 하루 되세요!", user: { id: 11, name: "user" } }
       ]
+    },
+    removeFeed(id) {
+      this.feedData = this.feedData.filter(feed => feed.id !== id)
     }
   }
 })
